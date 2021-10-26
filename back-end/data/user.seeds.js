@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
+import faker from 'faker';
 
-const users = [
-    {
+const users = [{
         firstName: "Admin ",
         lastName: "User",
         email: "admin@example.com",
