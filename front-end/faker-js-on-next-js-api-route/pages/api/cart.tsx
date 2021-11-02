@@ -9,15 +9,9 @@ const limit = JSON.parse(req.body)?.limit ?? 10
 
   const customers = [...new Array(limit)].map((_, index) => {
     return {
-      id: index,
-      avartar: faker.image.avatar(),
-      firstName: faker.name.firstName(),
-      lastName: faker.name.lastName(),
-      email: faker.internet.email(),
-      streetAddress: faker.address.streetAddress(),
+      index,
+      name: faker.name.findName(),
       city: faker.address.city(),
-      state_abbr: faker.address.stateAbbr(),
-      zipcode: faker.address.zipCode(),
     }
   })
 
